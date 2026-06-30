@@ -1,16 +1,6 @@
 {
   "recipes": [
     {
-      "title": "Arroz con pollo facil",
-      "category": "Dominicana y latina",
-      "time": "45 minutos",
-      "difficulty": "Facil",
-      "image": "portada-recetas.png",
-      "summary": "Una receta casera y rendidora para compartir en familia.",
-      "ingredients": "2 tazas de arroz, 1 libra de pollo, ajo, cebolla, aji, oregano, caldo o agua, sal y aceite.",
-      "steps": "Sazona el pollo, sofrie con ajo, cebolla y aji. Agrega arroz, liquido y sal. Cocina tapado hasta que el arroz este suave."
-    },
-    {
       "title": "Mangu con huevo y queso",
       "category": "Desayunos",
       "time": "25 minutos",
@@ -39,6 +29,16 @@
       "ingredients": "Para la carne:\n1 libra de carne molida de res\n1 cucharadita de ajo majado o en polvo\n1 cucharadita de orégano\n1 cucharada de salsa inglesa\n1 cucharada de sazón líquido o adobo\n1/2 cebolla rallada o bien picadita\n1/2 cucharadita de pimienta\nSal al gusto\n1 cucharada de aceite\n\nPara armar el chimi:\n4 panes de agua, pan de chimi o pan tipo baguette suave\n2 tazas de repollo picado finito\n1 tomate en ruedas\n1 cebolla en ruedas finas\nKetchup al gusto\nMayonesa al gusto\n\nSalsa rápida para chimi:\n3 cucharadas de mayonesa\n2 cucharadas de ketchup\nUn chorrito de limón, opcional\n\nMezcla todo hasta formar una salsa rosada cremosa.\n\n",
       "steps": "Preparación paso a paso\n1. Sazona la carne:\n\nColoca la carne molida en un bowl. Agrega ajo, orégano, salsa inglesa, sazón líquido, cebolla, pimienta y sal. Mezcla bien hasta que todo quede integrado.\n\n2. Forma las carnes:\n\nDivide la mezcla en 4 porciones y forma tortas alargadas, parecidas al tamaño del pan.\n\n3. Cocina la carne:\n\nEn una sartén o plancha caliente, agrega un poco de aceite y cocina las carnes por ambos lados hasta que estén doradas y bien cocidas. Esto toma aproximadamente 5 a 7 minutos por lado.\n\n4. Prepara el repollo:\n\nPuedes usar el repollo crudo bien picadito o pasarlo rápidamente por la sartén con un poquito de aceite, sal y pimienta por 2 a 3 minutos para que quede más suave.\n\n5. Tuesta el pan:\n\nAbre el pan por la mitad y tuéstalo ligeramente en la plancha o sartén. Esto ayuda a que el chimi quede más sabroso y no se moje rápido con la salsa.\n\n6. Arma el chimi:\n\nColoca la carne dentro del pan, agrega repollo, tomate, cebolla y la salsa rosada. También puedes añadir ketchup y mayonesa.\n\n7. Sirve caliente\n\nCierra el pan, presiona un poco en la plancha si deseas, y sirve de inmediato.",
       "image": "/uploads/chatgpt-image-30-jun-2026-13_02_14.png"
+    },
+    {
+      "title": "Yaniqueques dominicanos caseros",
+      "category": "Rapida",
+      "time": "35 a 45 minutos",
+      "difficulty": "Facil",
+      "summary": "Los yaniqueques son una fritura dominicana crujiente y deliciosa, muy popular en playas, calles y puestos de comida. Se preparan con una masa sencilla de harina, agua, sal y un toque de mantequilla o aceite. Son perfectos para comer solos, con ketchup, mayonesa o acompañados de queso, salami o huevo.",
+      "ingredients": "Ingredientes\nPara aproximadamente 8 a 10 yaniqueques medianos:\n2 tazas de harina de trigo\n1 cucharadita de sal\n1 cucharadita de polvo de hornear\n1 cucharada de mantequilla o aceite\n3/4 taza de agua, aproximadamente\nAceite suficiente para freír\nOpcional\n1/2 cucharadita de azúcar, si los quieres con un toque más suave\nOrégano al gusto\nAjo en polvo al gusto",
+      "steps": "1. Prepara la masa\n\nEn un bowl, mezcla la harina, la sal y el polvo de hornear. Luego agrega la mantequilla o el aceite y mezcla con las manos hasta que se integre bien.\n\n2. Agrega el agua\n\nAñade el agua poco a poco mientras vas mezclando. La masa debe quedar suave, manejable y que no se pegue demasiado en las manos.\n\n3. Amasa\n\nAmasa por aproximadamente 5 minutos, hasta que la masa se vea uniforme y lisa.\n\n4. Deja reposar\n\nCubre la masa con un paño limpio o plástico y déjala reposar por 15 a 20 minutos. Esto ayuda a que sea más fácil estirarla.\n\n5. Divide y forma los yaniqueques\n\nDivide la masa en bolitas. Luego estira cada bolita con un rodillo o botella hasta formar círculos finos.\n\n6. Haz pequeños cortes\n\nCon un cuchillo, haz 2 o 3 cortes pequeños en el centro de cada yaniqueque. Esto ayuda a que no se inflen demasiado al freír.\n\n7. Fríe\n\nCalienta suficiente aceite en una sartén. Fríe los yaniqueques a fuego medio-alto hasta que estén dorados y crujientes por ambos lados.\n\n8. Escurre y sirve\n\nColócalos sobre papel absorbente para retirar el exceso de aceite. Sirve calientes.\n\nTips para que queden crujientes\n\nEstira la masa bien fina para que queden más crujientes.\n\nNo los frías con el aceite frío, porque absorberán mucha grasa.\n\nSi quieres un yaniqueque más suave por dentro y crujiente por fuera, no estires la masa demasiado fina.",
+      "image": "/uploads/chatgpt-image-30-jun-2026-13_13_02.png"
     }
   ]
 }
