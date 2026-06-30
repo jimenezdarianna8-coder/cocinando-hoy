@@ -19,6 +19,16 @@
       "summary": "Desayuno dominicano sencillo con platano, huevo y queso.",
       "ingredients": "Platanos verdes, mantequilla o aceite, cebolla, huevo, queso de freir y sal.",
       "steps": "Hierve los platanos con sal, majalos con un poco de agua de coccion y mantequilla. Sirve con huevo, queso y cebolla salteada."
+    },
+    {
+      "title": "Prueba",
+      "category": "Cenas",
+      "difficulty": "Media",
+      "time": "30m",
+      "image": "/uploads/imagen-vectorial-compressor.jpg",
+      "summary": "aslkjhgf",
+      "ingredients": "lkjhgf",
+      "steps": "kjhgfdsa"
     }
   ]
 }
