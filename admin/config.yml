@@ -1,0 +1,47 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "recetas"
+    label: "Recetas"
+    files:
+      - name: "recetas_publicadas"
+        label: "Recetas publicadas"
+        file: "recetas-data.json"
+        fields:
+          - label: "Recetas"
+            name: "recipes"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Categoria", name: "category", widget: "select", options: ["Desayunos", "Almuerzos", "Cenas", "Postres", "Sopas", "Economica", "Rapida", "Saludable", "Dominicana y latina"] }
+              - { label: "Tiempo", name: "time", widget: "string", required: false }
+              - { label: "Dificultad", name: "difficulty", widget: "select", options: ["Facil", "Media", "Avanzada"], required: false }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Resumen", name: "summary", widget: "text" }
+              - { label: "Ingredientes", name: "ingredients", widget: "text" }
+              - { label: "Preparacion", name: "steps", widget: "markdown" }
+
+  - name: "blog"
+    label: "Blog"
+    files:
+      - name: "blog_posts"
+        label: "Articulos del blog"
+        file: "blog-data.json"
+        fields:
+          - label: "Articulos"
+            name: "posts"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Titulo", name: "title", widget: "string" }
+              - { label: "Categoria", name: "category", widget: "string", required: false }
+              - { label: "Fecha", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+              - { label: "Resumen", name: "summary", widget: "text" }
+              - { label: "Imagen", name: "image", widget: "image", required: false }
+              - { label: "Contenido", name: "content", widget: "markdown" }

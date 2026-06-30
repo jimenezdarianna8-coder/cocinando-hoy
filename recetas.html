@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recetas publicadas | Cocinando Hoy</title>
+    <meta name="description" content="Recetas publicadas en Cocinando Hoy con ingredientes, preparacion, imagenes y consejos faciles.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="logo-cocinando-hoy.png" alt="" class="brand-logo">
+        <span class="brand-text"><span>Cocinando</span> Hoy</span>
+      </a>
+      <nav aria-label="Navegacion principal">
+        <a href="index.html">Inicio</a>
+        <a href="recetas.html">Recetas</a>
+        <a href="index.html#categorias">Categorias</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="article-page blog-page">
+      <p class="eyebrow">Recetas publicadas</p>
+      <h1>Recetas que puedes agregar desde tu panel privado</h1>
+      <p>Esta seccion muestra las recetas que publiques desde el panel de administracion. Puedes agregar imagen, categoria, ingredientes y preparacion.</p>
+      <section class="recipe-admin-grid" id="recipes-list" aria-label="Lista de recetas">
+        <p class="empty-state">Cargando recetas...</p>
+      </section>
+    </main>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <script>
+      const recipesContainer = document.querySelector("#recipes-list");
+
+      function renderRecipes(recipes) {
+        if (!recipes.length) {
+          recipesContainer.innerHTML = '<p class="empty-state">Todavia no hay recetas publicadas.</p>';
+          return;
+        }
+
+        recipesContainer.innerHTML = recipes.map((recipe) => `
+          <article class="recipe-admin-card">
+            <img src="${recipe.image || "portada-recetas.png"}" alt="">
+            <div>
+              <span class="recipe-tag">${recipe.category || "Receta"}</span>
+              <h2>${recipe.title}</h2>
+              <p class="blog-date">${recipe.time || ""}${recipe.difficulty ? ` - ${recipe.difficulty}` : ""}</p>
+              <p>${recipe.summary || ""}</p>
+              <h3>Ingredientes</h3>
+              <p>${recipe.ingredients || ""}</p>
+              <h3>Preparacion</h3>
+              <p>${recipe.steps || ""}</p>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      fetch("recetas-data.json")
+        .then((response) => response.json())
+        .then((data) => renderRecipes(data.recipes || []))
+        .catch(() => {
+          recipesContainer.innerHTML = '<p class="empty-state">No se pudieron cargar las recetas.</p>';
+        });
+    </script>
+  </body>
+</html>

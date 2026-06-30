@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "title": "Como organizar comidas de la semana sin gastar de mas",
+      "category": "Organizacion",
+      "date": "2026-06-29",
+      "summary": "Ideas simples para planificar desayunos, almuerzos y cenas con ingredientes que rindan mas.",
+      "image": "almuerzo.png",
+      "content": "Planificar la comida de la semana ayuda a ahorrar tiempo y dinero. Elige tres proteinas, dos bases como arroz o pasta, y vegetales que puedas usar en varias recetas. Guarda porciones listas para dias ocupados y deja una comida flexible para aprovechar sobras."
+    },
+    {
+      "title": "Ingredientes dominicanos que siempre resuelven",
+      "category": "Cocina latina",
+      "date": "2026-06-29",
+      "summary": "Una lista practica de ingredientes basicos para cocinar con sazon casero.",
+      "image": "dominicana.png",
+      "content": "Ajo, oregano, cebolla, aji, cilantro ancho, tomate, arroz, habichuelas y platano son una buena base para muchas comidas dominicanas. Con esos ingredientes puedes preparar platos rendidores, sabrosos y faciles de adaptar."
+    }
+  ]
+}

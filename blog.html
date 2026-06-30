@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog | Cocinando Hoy</title>
+    <meta name="description" content="Blog de Cocinando Hoy con consejos de cocina, organizacion, ahorro y recetas para el dia a dia.">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">
+        <img src="logo-cocinando-hoy.png" alt="" class="brand-logo">
+        <span class="brand-text"><span>Cocinando</span> Hoy</span>
+      </a>
+      <nav aria-label="Navegacion principal">
+        <a href="index.html">Inicio</a>
+        <a href="recetas.html">Recetas</a>
+        <a href="index.html#categorias">Categorias</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="article-page blog-page">
+      <p class="eyebrow">Blog</p>
+      <h1>Ideas de cocina, organizacion y vida en casa</h1>
+      <p>Publica consejos, historias, recomendaciones, listas y temas relacionados con comida, ahorro, bienestar y cocina latina.</p>
+      <section class="blog-grid" id="blog-posts" aria-label="Articulos del blog">
+        <p class="empty-state">Cargando articulos...</p>
+      </section>
+    </main>
+
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <script>
+      const postsContainer = document.querySelector("#blog-posts");
+
+      function formatDate(value) {
+        return new Intl.DateTimeFormat("es-DO", { dateStyle: "medium" }).format(new Date(`${value}T12:00:00`));
+      }
+
+      function renderPosts(posts) {
+        if (!posts.length) {
+          postsContainer.innerHTML = '<p class="empty-state">Todavia no hay articulos publicados.</p>';
+          return;
+        }
+
+        postsContainer.innerHTML = posts.map((post) => `
+          <article class="blog-card">
+            <img src="${post.image || "portada-recetas.png"}" alt="">
+            <div>
+              <span class="recipe-tag">${post.category || "Blog"}</span>
+              <h2>${post.title}</h2>
+              <p class="blog-date">${formatDate(post.date)}</p>
+              <p>${post.summary}</p>
+              <details>
+                <summary>Leer mas</summary>
+                <p>${post.content}</p>
+              </details>
+            </div>
+          </article>
+        `).join("");
+      }
+
+      fetch("blog-data.json")
+        .then((response) => response.json())
+        .then((data) => renderPosts(data.posts || []))
+        .catch(() => {
+          postsContainer.innerHTML = '<p class="empty-state">No se pudieron cargar los articulos.</p>';
+        });
+    </script>
+  </body>
+</html>

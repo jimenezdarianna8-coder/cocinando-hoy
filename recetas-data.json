@@ -1,0 +1,24 @@
+{
+  "recipes": [
+    {
+      "title": "Arroz con pollo facil",
+      "category": "Dominicana y latina",
+      "time": "45 minutos",
+      "difficulty": "Facil",
+      "image": "portada-recetas.png",
+      "summary": "Una receta casera y rendidora para compartir en familia.",
+      "ingredients": "2 tazas de arroz, 1 libra de pollo, ajo, cebolla, aji, oregano, caldo o agua, sal y aceite.",
+      "steps": "Sazona el pollo, sofrie con ajo, cebolla y aji. Agrega arroz, liquido y sal. Cocina tapado hasta que el arroz este suave."
+    },
+    {
+      "title": "Mangu con huevo y queso",
+      "category": "Desayunos",
+      "time": "25 minutos",
+      "difficulty": "Facil",
+      "image": "desayuno.png",
+      "summary": "Desayuno dominicano sencillo con platano, huevo y queso.",
+      "ingredients": "Platanos verdes, mantequilla o aceite, cebolla, huevo, queso de freir y sal.",
+      "steps": "Hierve los platanos con sal, majalos con un poco de agua de coccion y mantequilla. Sirve con huevo, queso y cebolla salteada."
+    }
+  ]
+}
